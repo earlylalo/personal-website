@@ -5,50 +5,76 @@
 }
 
 body {
-    background-color: #219ebc;
+    /* background-color: #219ebc; */
     font-family: 'Nunito', sans-serif;
     font-size: 70%;
 
-    /* color: #ffb703; */
-    /* color: #fb8500; */
-    /* color: #8ecae6; */
+    color: #023047;
+    /*color: #ffb703; 
+    color: #fb8500;
+    color: #8ecae6; */
 }
 
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
-
-header {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-
-    /* min-height: 50px; */
+/* Style for the header */
+.header {
+    min-height: 8vh;
+    width: 100%;
     background-color: #023047;
-    padding: .3em 3em;
-    color: #f8b711;
-}
-header div p {
-    font-size: 3rem;
-    font-weight: 600;
-}
-header ul {
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    /* z-index: 1; */
 }
 
-header ul li a {
-    color: white;
-    font-size: 1.1rem;
-    
+/* Style for wrapper main -- landing page */
+.wrapper {
+    padding: 0 3rem;
+}
+.wrapper .main {
+    background-color: #8ecae6;;
+    height: 90vh;
+    width: 100%;
+    margin-top: 10vh;
 }
 
-header ul li a:hover {
-    color: #f8b711;
-    border-bottom: 1px solid #f8b711;
+/* Style for about section */
+.wrapper .about {
+    height: 100vh;
+    width: 100%;
+    background-color: #fb8500;
 }
+
+/* Style for contact section */
+.wrapper .contact {
+    height: 100vh;
+    width: 100%;
+    background-color: #ffb703;
+}
+
+footer {
+    height: 100vh;
+    width: 100%;
+    background-color: #08212e;
+}
+
+/* Media query for screen smaller than 600px */
+@media screen and (max-width: 600px) {
+    .header {
+        background-color: antiquewhite;
+        bottom: 0;
+        top: auto;
+        z-index: 0;
+    }
+     
+    .wrapper {
+        padding: 0 .8rem;
+    }
+    .wrapper .main {
+        height: 100vh;
+        margin-top: 0;
+    }
+    footer {
+        height: 90vh;
+        margin-bottom: 10vh;
+    }
+}
+
